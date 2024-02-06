@@ -1,2 +1,3 @@
 # Traversa
-LP for travelling company, HTML5, CSS and JS
+
+LP for travelling company, HTML5, CSS, JS and GSAP
