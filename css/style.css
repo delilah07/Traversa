@@ -67,6 +67,7 @@ body {
   letter-spacing: 0.1rem;
   transition: background-color 0.5s ease-in-out;
   cursor: pointer;
+  font-family: 'Outfit', sans-serif;
 }
 
 .btn img {
@@ -77,6 +78,8 @@ body {
 input {
   border: none;
   background-color: transparent;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
 }
 
 .section__suptitle {
@@ -311,7 +314,7 @@ header {
 
 /* signup section */
 #signup {
-  margin: 7.4rem 0 7.4rem 4rem;
+  margin: 7.4rem 0 5.1rem 4rem;
   text-align: center;
 }
 #signup .container {
@@ -346,6 +349,46 @@ header {
 .signup__btn span {
   white-space: nowrap;
   font-weight: bold;
+}
+
+/* footer */
+footer {
+  border-top: 0.1rem solid var(--red-color);
+  padding: 3.2rem 0 5.45rem;
+}
+footer .container {
+  max-width: 79.6rem;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__logo {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.25rem;
+}
+.footer__logo img {
+  filter: invert(1);
+  max-height: 2.5rem;
+  width: auto;
+}
+.footer__logo-text {
+  margin-top: 0.3rem;
+}
+.footer__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-bottom: 0.2rem solid var(--red-color);
+}
+.footer__list {
+  margin-top: 0.85rem;
+}
+.footer__item + .footer__item {
+  margin-top: 0.3rem;
 }
 
 @media (hover: hover) {
