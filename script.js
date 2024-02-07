@@ -19,6 +19,7 @@ sliderContainer.addEventListener('sliderMove', () => {
   if (isMoving) return;
   isMoving = true;
   sliderObserver.observe(slides[slides.length - 1]);
+  console.log(currentSliderIndex, transformUnit);
   sliderContainer.style.transform = `translateX(-${
     currentSliderIndex < transformUnit
       ? currentSliderIndex * (slides[0].clientWidth + 20)
