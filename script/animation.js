@@ -14,7 +14,7 @@ export function loadAnim() {
       {
         y: -200,
       },
-      '+=1'
+      '+=0.5'
     )
     .from(
       'header img',
@@ -24,15 +24,11 @@ export function loadAnim() {
       },
       '-=0.5'
     )
-    .from(
-      '.intro__title span',
-      {
-        y: 100,
-        opacity: 0,
-        stagger: 0.5,
-      },
-      '+=1'
-    )
+    .from('.intro__title span', {
+      y: 100,
+      opacity: 0,
+      stagger: 0.5,
+    })
     .to('.footer__logo img', { opacity: 0 }, '-2');
 }
 
@@ -73,7 +69,7 @@ export const scrollAnim = () => {
           },
           y: 100,
           opacity: 0,
-          delay: 0.5,
+          delay: 0.1,
         });
       });
       document.querySelectorAll('.section__suptitle').forEach((el) => {
