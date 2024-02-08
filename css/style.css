@@ -61,7 +61,7 @@ body {
   font-family: 'Outfit', sans-serif;
   font-weight: 500;
   background-color: #000;
-  opacity: 0;
+  visibility: hidden;
 }
 
 .container {
