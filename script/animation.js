@@ -1,7 +1,7 @@
 //now animate each character into place from 100px above, fading in:
 export function loadAnim() {
   const tl = gsap.timeline({ default: { duration: 1 } });
-  tl.to('body', { opacity: 1 })
+  tl.to('body', { visibility: visible })
     .from(
       'header',
       {
