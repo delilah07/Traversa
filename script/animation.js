@@ -19,7 +19,7 @@ export function loadAnim() {
     )
     .from('.intro__title span', {
       y: 100,
-      opacity: 0,
+      autoAlpha: 0,
       stagger: 0.5,
     })
     .to('.footer__logo img', { opacity: 0 }, '-=2');
