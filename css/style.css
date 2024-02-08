@@ -1,3 +1,16 @@
+@import url(./reset.css);
+
+@font-face {
+  font-family: 'Outfit';
+  src: url(../assets/fonts/Outfit-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Outfit';
+  src: url(../assets/fonts/Outfit-Medium.ttf);
+  font-weight: 500;
+}
+
 :root {
   --gray-color: #c9cbcf;
   --red-color: #4d3559;
