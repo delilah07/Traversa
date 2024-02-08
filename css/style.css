@@ -44,7 +44,7 @@ body {
   max-width: 100vw;
   width: 100%;
   overflow-x: hidden;
-  /* opacity: 0; */
+  opacity: 0;
 }
 
 .container {
@@ -61,7 +61,7 @@ body {
   gap: 0.5rem;
   padding: 0.35rem 1.2rem;
   background-color: var(--red-color);
-  border: 0.5rem solid var(--red-color);
+  border: 0.2rem solid var(--red-color);
   border-radius: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -80,6 +80,9 @@ input {
   background-color: transparent;
   font-family: 'Outfit', sans-serif;
   font-weight: 500;
+}
+input:focus-visible {
+  outline: none;
 }
 
 .section__suptitle {
@@ -131,6 +134,7 @@ section + section {
   width: 2.3rem;
   background-color: var(--red-shadow-color);
   z-index: -1;
+  transform-origin: center top;
 }
 
 /* header */
@@ -169,10 +173,12 @@ header {
 }
 .intro__picture {
   position: absolute;
-  top: 0;
+  top: -2rem;
   left: 0;
   right: 0;
   z-index: -1;
+  transform: scale(1.1);
+  transition: all 0.2s linear;
 }
 .intro__wrapper {
   min-height: 100svh;
@@ -192,6 +198,12 @@ header {
   max-width: 32.25rem;
   letter-spacing: 0.1rem;
   line-height: 1;
+  position: relative;
+}
+.intro__title span {
+  position: relative;
+  overflow: hidden;
+  display: block;
 }
 .intro__content {
   display: flex;
@@ -326,11 +338,12 @@ header {
   margin-right: auto;
 }
 .signup__form {
-  margin: 1.4rem 0.9rem 0 0.7rem;
-  display: flex;
-  border: 0.1rem solid var(--red-color);
-  padding: 0.1rem;
+  margin: 1.4rem auto 0;
+  display: inline-flex;
+  border: 0.2rem solid var(--red-color);
+  padding: 0.2rem;
   border-radius: 3rem;
+  flex: 0 0 auto;
 }
 .signup__form label {
   display: none;
@@ -341,14 +354,21 @@ header {
   border-radius: 3rem;
   font-size: 0.7rem;
 }
+
 .signup__btn {
   font-size: 1rem;
   letter-spacing: 0.1rem;
   padding: 0rem 0.4rem;
+  height: 2.7rem;
+  /* overflow: hidden; */
 }
 .signup__btn span {
   white-space: nowrap;
   font-weight: bold;
+  position: relative;
+}
+.signup__btn img {
+  position: relative;
 }
 
 /* footer */
@@ -359,7 +379,7 @@ footer {
 footer .container {
   max-width: 79.6rem;
 }
-.footer__wrapper {
+.footer__nav {
   display: flex;
   justify-content: space-between;
 }
@@ -392,12 +412,12 @@ footer .container {
 }
 
 @media (hover: hover) {
-  .btn:hover {
+  .btn:not([disabled]):hover {
     background-color: #000;
     color: var(--red-color);
     transition: background-color 0.5s ease-in-out;
   }
-  .btn:hover img {
+  .btn:not([disabled]):hover img {
     filter: var(--from-black);
   }
   .slider__arrow:hover:not(:disabled) {

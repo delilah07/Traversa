@@ -1,3 +1,6 @@
+import { loadAnim, scrollAnim } from './animation.js';
+import { handleFormSubmit } from './form.js';
+
 // slider
 const sliderArrows = document.querySelectorAll('[data-slideBtn]');
 const sliderContainer = document.querySelector('.places__slider');
@@ -9,7 +12,7 @@ let transformUnit = slides.length;
 
 const removeDisabledAttribute = (els) =>
   els.forEach((el) => el.removeAttribute('disabled'));
-const addDisabledAttribute = (els) =>
+export const addDisabledAttribute = (els) =>
   els.forEach((el) => el.setAttribute('disabled', 'true'));
 
 sliderArrows.forEach((btn) =>
@@ -60,3 +63,14 @@ function handleSlideBtnClick(e) {
   slides[currentSliderIndex].classList.add('active');
   sliderContainer.dispatchEvent(new Event('sliderMove'));
 }
+
+// form
+const signupForm = document.querySelector('.signup__form');
+signupForm.addEventListener('submit', handleFormSubmit);
+
+// load animation
+window.addEventListener('load', loadAnim);
+
+// scrolling
+gsap.registerPlugin(ScrollTrigger);
+scrollAnim();
