@@ -3,13 +3,6 @@ export function loadAnim() {
   const tl = gsap.timeline({ default: { duration: 1 } });
   tl.to('body', { opacity: 1 })
     .from(
-      '.intro__picture',
-      {
-        opacity: 0,
-      },
-      0.5
-    )
-    .from(
       'header',
       {
         y: -200,
@@ -29,7 +22,7 @@ export function loadAnim() {
       opacity: 0,
       stagger: 0.5,
     })
-    .to('.footer__logo img', { opacity: 0 }, '-2');
+    .to('.footer__logo img', { opacity: 0 }, '-=2');
 }
 
 export const scrollAnim = () => {
