@@ -1,7 +1,10 @@
 import { addDisabledAttribute } from './slider.js';
+
 const signupForm = document.querySelector('.signup__form');
 const signupBtn = document.querySelector('.signup__btn');
 const signupInput = document.querySelector('.signup__input');
+const signupLabel = document.querySelector('.signup__form label');
+const validPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
 const signupBtnOptions = {
   pending: `
@@ -13,14 +16,21 @@ const signupBtnOptions = {
 
 export async function handleFormSubmit(e) {
   e.preventDefault();
-  addDisabledAttribute([signupForm, signupBtn]);
-  signupBtn.innerHTML = signupBtnOptions.pending;
-  signupBtn.setAttribute('disabled', '');
-  signupBtn.style.cursor = 'inherit';
-  const userEmail = signupInput.value;
-  signupInput.style.display = 'none';
-  await postEmailToDatabase(userEmail);
-  signupBtn.innerHTML = signupBtnOptions.success;
+  if (signupInput.value.match(validPattern)) {
+    console.log('yes');
+    signupLabel.style.display = 'none';
+    addDisabledAttribute([signupForm, signupBtn]);
+    signupBtn.innerHTML = signupBtnOptions.pending;
+    signupBtn.setAttribute('disabled', '');
+    signupBtn.style.cursor = 'inherit';
+    const userEmail = signupInput.value;
+    signupInput.style.display = 'none';
+    await postEmailToDatabase(userEmail);
+    signupBtn.innerHTML = signupBtnOptions.success;
+  } else {
+    console.log('no');
+    signupLabel.style.display = 'block';
+  }
 }
 
 function postEmailToDatabase(email) {
