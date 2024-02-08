@@ -4,11 +4,13 @@
   font-family: 'Outfit';
   src: url(../assets/fonts/Outfit-Bold.ttf);
   font-weight: 700;
+  font-display: 'swap';
 }
 @font-face {
   font-family: 'Outfit';
   src: url(../assets/fonts/Outfit-Medium.ttf);
   font-weight: 500;
+  font-display: 'swap';
 }
 
 :root {
