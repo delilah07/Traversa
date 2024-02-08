@@ -1,5 +1,4 @@
 import { addDisabledAttribute } from './script.js';
-
 const signupForm = document.querySelector('.signup__form');
 const signupBtn = document.querySelector('.signup__btn');
 const signupInput = document.querySelector('.signup__input');

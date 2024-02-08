@@ -42,7 +42,7 @@ export const scrollAnim = () => {
       scrub: 1,
     },
     y: 500,
-    scale: 1.4,
+    scale: 1.2,
     opacity: 1,
   });
   gsap.from('.intro__btn', {
@@ -61,6 +61,7 @@ export const scrollAnim = () => {
       },
       y: 100,
       opacity: 0,
+      delay: 0.5,
     });
   });
   document.querySelectorAll('.section__suptitle').forEach((el) => {
@@ -71,6 +72,7 @@ export const scrollAnim = () => {
       },
       y: -50,
       opacity: 0,
+      delay: 0.5,
     });
   });
   document.querySelectorAll('.section__text').forEach((el) => {
@@ -100,6 +102,7 @@ export const scrollAnim = () => {
     },
     scaleX: 0,
     stagger: 0.5,
+    delay: 0.5,
   });
   gsap.from('.slider__arrow', {
     scrollTrigger: {
@@ -118,6 +121,7 @@ export const scrollAnim = () => {
     x: -1500,
     delay: 1,
     duration: 2,
+    delay: 0.5,
   });
   gsap.from('.number__column', {
     scrollTrigger: {
@@ -144,7 +148,7 @@ export const scrollAnim = () => {
       start: '+=100 bottom',
     },
     scaleY: 0,
-    delay: 2,
+    delay: 0.5,
   });
   gsap.from('.signup__btn', {
     scrollTrigger: {
@@ -152,7 +156,7 @@ export const scrollAnim = () => {
       start: '+=100 bottom',
     },
     opacity: 0,
-    delay: 2.5,
+    delay: 1,
   });
   gsap.from('.signup__btn img', {
     scrollTrigger: {
@@ -161,7 +165,7 @@ export const scrollAnim = () => {
     },
     opacity: 0,
     x: -100,
-    delay: 3,
+    delay: 1.2,
     duration: 1.5,
   });
   gsap.from('.signup__btn span', {
@@ -171,7 +175,7 @@ export const scrollAnim = () => {
     },
     opacity: 0,
     x: -100,
-    delay: 3,
+    delay: 1.2,
     duration: 1.5,
   });
 
@@ -183,7 +187,7 @@ export const scrollAnim = () => {
 
     scaleX: 0,
     transformOrigin: 'left',
-    duration: 1.5,
+    duration: 0.5,
   });
 
   gsap.to('.footer__logo img', {
@@ -193,7 +197,7 @@ export const scrollAnim = () => {
     },
     keyframes: [{ opacity: 1 }, { rotate: 180 }],
     duration: 1.5,
-    delay: 1.5,
+    delay: 0.5,
   });
   gsap.from('.footer__logo span', {
     scrollTrigger: {
@@ -201,7 +205,7 @@ export const scrollAnim = () => {
       start: '+=100 bottom',
     },
     opacity: 0,
-    delay: 2,
+    delay: 1,
   });
   gsap.from('.footer__logo-text', {
     scrollTrigger: {
@@ -209,7 +213,7 @@ export const scrollAnim = () => {
       start: '+=100 bottom',
     },
     opacity: 0,
-    delay: 2,
+    delay: 1,
   });
   gsap.from('.footer__column:not(:first-child)', {
     scrollTrigger: {
@@ -217,7 +221,7 @@ export const scrollAnim = () => {
       start: '+=100 bottom',
     },
     opacity: 0,
-    delay: 2.5,
+    delay: 1,
     stagger: 0.5,
   });
 };
