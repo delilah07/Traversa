@@ -484,6 +484,9 @@ footer .container {
     margin-top: 3rem;
     text-align: center;
   }
+  .worldover__title {
+    max-width: 100%;
+  }
   .worldover__wrapper {
     gap: 1.1rem;
     grid-template-columns: 1fr;
@@ -493,6 +496,9 @@ footer .container {
   }
   #signup {
     margin: 3rem 0 2rem;
+  }
+  footer {
+    padding: 1.5rem 0 2.5rem;
   }
   .footer__logo {
     justify-content: center;
