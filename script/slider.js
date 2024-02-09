@@ -1,3 +1,4 @@
+const sliderArrows = document.querySelectorAll('[data-slideBtn]');
 const sliderContainer = document.querySelector('.places__slider');
 const slides = [...document.querySelectorAll('.places__slide')];
 
