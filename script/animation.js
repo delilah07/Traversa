@@ -43,8 +43,7 @@ export const scrollAnim = () => {
           scrub: 1,
         },
         y: 500,
-        scale: 1.2,
-        opacity: 1,
+        ease: 'none',
       });
       gsap.from('.intro__btn', {
         scrollTrigger: {

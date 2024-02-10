@@ -190,13 +190,13 @@ header {
 }
 .intro__picture {
   position: absolute;
-  top: -2rem;
+  top: -5rem;
   left: 0;
   right: 0;
   z-index: -1;
-  /* transform: scale(1.1); */
+  transform: scale(1.1);
   transform-origin: center;
-  transition: all 0.2s linear;
+  /* transition: all 0.2s linear; */
 }
 .intro__wrapper {
   min-height: 100svh;
