@@ -61,7 +61,6 @@ body {
   font-family: 'Outfit', sans-serif;
   font-weight: 500;
   background-color: #000;
-  visibility: hidden;
 }
 
 .container {
@@ -187,6 +186,7 @@ header {
 
 /* intro section */
 #intro {
+  visibility: hidden;
   text-align: center;
 }
 .intro__picture {
